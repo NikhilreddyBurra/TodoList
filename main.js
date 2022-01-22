@@ -1,17 +1,18 @@
-let addToDoButton = document.getElementById('addToDo');
-let toDoContainer = document.getElementById('toDoContainer');
-let inputField = document.getElementById('inputField');
+function addItem() {
+    var ul = document.getElementById("myList");
+    var candidate = document.getElementById("inputField");
+    var li = document.createElement("li");
+    li.setAttribute('id', candidate.value);
+    li.appendChild(document.createTextNode(candidate.value));
 
-addToDoButton.addEventListener('click', function(){
-    var paragraph = document.createElement('p');
-    paragraph.classList.add('paragraph-styling');
-    paragraph.innerText = inputField.value;
-    toDoContainer.appendChild(paragraph);
-    inputField.value = "";
-    paragraph.addEventListener('click', function(){
-        paragraph.style.textDecoration = "line-through";
-    })
-    paragraph.addEventListener('dblclick', function(){
-        toDoContainer.removeChild(paragraph);
-    })
-})
+    var span = document.createElement("span");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    span.addEventListener('click', () => {
+        li.remove();
+    });
+
+    li.appendChild(span);
+    ul.appendChild(li);
+}

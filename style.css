@@ -5,11 +5,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
+/* .container {
   width: 360px;
 }
 
-#inputhere {
+/* #inputhere {
   width: 300px;
   height: 46px;
   border-width: 0;
@@ -17,17 +17,18 @@ body {
   outline: none;
   font-size: 25px;
   vertical-align: middle;
-}
+} */
 
-#add {
+/* #add {
   height: 46px;
   width: 50px;
   border: 1px solid black;
   vertical-align: middle;
   font-size: 25px;
-}
+} */
+*/
 
-.paragraph-styling {
+/* .paragraph-styling {
   margin: 0;
   cursor: pointer;
   font-size: 20px;
@@ -36,4 +37,24 @@ body {
 
 .to-dos {
   margin-top: 25px;
+} */
+
+
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 3px;
+  margin-bottom: 5px;
+}
+.close {
+  display: inline-block;
+  padding: 0px;
+  background: rgba(13, 173, 120, 0.849);
+  margin-left: 13px;
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
 }
